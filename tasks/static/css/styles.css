@@ -1,0 +1,23 @@
+.cabecalho {
+    margin: 10px;
+    padding: 10px;
+    background-color: #cccccc4d ;
+
+    display: flex;
+}
+
+.cabecalho > ul > li{
+    color: rgba(131, 127, 127, 0.76);
+
+    display: inline;
+}
+.cabecalho > ul > li:hover {
+    margin: 5px;
+    padding: 5px;
+
+    background-color: rgb(56, 52, 52);
+}
+
+h1 {
+    color: red;
+}

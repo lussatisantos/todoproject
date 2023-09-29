@@ -1,14 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <p>Barra de navegacao</p>
-    {% block content %}
-    {% endblock %}
-    <p>Rodape da pagina</p>
+    <header class="cabecalho">
+        <a href="#">To Do</a>
+        <ul>
+            <li>Tarefas</li>
+            <li>Usuarios</li>
+            <li>Sobre nos</li>
+        </ul>
+    </header>
+    <main>
+        <div>
+            {% block content %}
+            {% endblock %}
+            <p>Rodape da pagina</p>
+        </div>
+    </main>
+    <footer>
+        rodape
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
