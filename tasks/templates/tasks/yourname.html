@@ -1,1 +1,7 @@
-<h1>O seu nome sera {{ name }}</h1>
+{% extends 'base.html' %}
+
+{% block title %}Qual o seu nome?{% endblock %}
+
+{% block content %}
+<h1>O seu nome sera: {{ name }}</h1>
+{% endblock %}
