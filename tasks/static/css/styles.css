@@ -8,9 +8,9 @@
 
 .cabecalho > ul > li{
     color: rgba(131, 127, 127, 0.76);
-
     display: inline;
 }
+
 .cabecalho > ul > li:hover {
     margin: 5px;
     padding: 5px;
@@ -19,5 +19,38 @@
 }
 
 h1 {
-    color: red;
+    color: green;
+}
+
+/*
+.navbar {
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-light .nav-nav a.nav-link {
+    color: #333;
+    letter-spacing: 1px;
+}
+*/
+
+footer {
+    background-color: #333;
+    height: 300px;
+    border: 2px solid #202020;
+}
+
+footer p {
+    color: #f5f5f5;
+    text-align: center;
+    top: 50%;
+    position: relative;
 }
