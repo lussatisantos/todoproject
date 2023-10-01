@@ -3,21 +3,21 @@
 {% block title %}Lista de Tarefas {% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
-    <h1>Lista de Tarefas</h1>
-    <div class="col-2 add-div">
-        <i class="fas fa-plus"></i>Adicionar tarefas
+    <div class="offset-1 col-10 list-div">
+        <h1>Lista de Tarefas</h1>
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i>Adicionar tarefas
+        </div>
+        <div class="col-8 search-div">
+            <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar">
+            <i class="fas fa-search"></i>
+        </div>
+        <ul class="task-list">
+            <li class="task-item">
+                <span>Titulo da tarefa</span>
+                <span><i class="fas fa-trash">Apagar</i></span>
+                <span><i class="fas fa-edit">Editar</i></span>
+            </li>
+        </ul>
     </div>
-    <div class="col-8 search-div">
-        <input type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar">
-        <i class="fas fa-search"></i>
-    </div>
-    <ul class="task-list">
-        <li class="task-item">
-            <span>Titulo da tarefa</span>
-            <span><i class="fas fa-trash"></i></span>
-            <span><i class="fas fa-edit"></i></span>
-        </li>
-    </ul>
-</div>
 {% endblock %}
