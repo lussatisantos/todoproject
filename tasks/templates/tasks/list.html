@@ -9,15 +9,17 @@
             <i class="fas fa-plus"></i>Adicionar tarefas
         </div>
         <div class="col-8 search-div">
-            <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar">
+            <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar"/>
             <i class="fas fa-search"></i>
         </div>
         <ul class="task-list">
-            <li class="task-item">
-                <span>Titulo da tarefa</span>
-                <span><i class="fas fa-trash">Apagar</i></span>
-                <span><i class="fas fa-edit">Editar</i></span>
-            </li>
+            {% for task in tasks %}
+                <li class="task-item">
+                    <span><a href="/task/{task.id}">{{task.title}}</a></span>
+                    <span><i class="fas fa-trash">Apagar</i></span>
+                    <span><i class="fas fa-edit">Editar</i></span>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 {% endblock %}
