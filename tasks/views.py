@@ -1,11 +1,15 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
 
 def taskList(request):
-    tasks = Task.objects.all
+    tasks_list = Task.objects.all
+    paginator = Paginator(tasks_list, 3)
+    page = request.GET.get('page')
+    tasks = paginator.get_page(page)
     return render(request, 'tasks/list.html', {'tasks': tasks})
 
 def taskView (request, id):
