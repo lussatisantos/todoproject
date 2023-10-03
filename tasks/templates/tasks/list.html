@@ -25,8 +25,8 @@
             {% for task in tasks %}
                 <li class="task-item">
                     <span><a href="task/{{task.id}}">{{task.title}}</a></span>
-                    <a class="add-link" href="delete/{{task.id}}"><span><i class="fas fa-trash">Apagar</i></span></a>
-                    <a class="add-link" href="edit/{{task.id}}"><span><i class="fas fa-edit">Editar</i></span></a>
+                    <a class="add-link delete-btn" href="delete/{{task.id}}"><span><i class="fas fa-trash">Del</i></span></a>
+                    <a class="add-link" href="edit/{{task.id}}"><span><i class="fas fa-edit">Edit</i></span></a>
                 </li>
             {% endfor %}
         </ul>

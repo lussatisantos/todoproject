@@ -1,1 +1,3 @@
-console.log('Funcionou')
+$(document).ready(function() {
+    console.log('funcionou')
+})

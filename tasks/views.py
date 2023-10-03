@@ -6,10 +6,7 @@ from .forms import TaskForm
 from django.contrib import messages
 
 def taskList(request):
-    tasks_list = Task.objects.all
-    paginator = Paginator(tasks_list, 3)
-    page = request.GET.get('page')
-    tasks = paginator.get_page(page)
+    tasks = Task.objects.all
     return render(request, 'tasks/list.html', {'tasks': tasks})
 
 def taskView (request, id):
