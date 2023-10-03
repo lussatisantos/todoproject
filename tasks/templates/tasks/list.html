@@ -10,9 +10,11 @@
                 <i class="fas fa-plus"></i>Adicionar tarefas
             </div>
         </a>
-        <div class="col-8 search-div">
-            <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar"/>
-            <i class="fas fa-search"></i>
+        <div class="col-9 search-div">
+            <form method="GET" class="search-form">
+                <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar"/>
+                <i class="fas fa-search" id="search-btn"></i>
+        </form>
         </div>
         {% if messages %}
             <ul class="messages">

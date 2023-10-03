@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     let deleteBtn = $('.delete-btn');
+    let seachBtn = $('#search-btn');
+    let searchForm = $('.search-form')
 
     $(deleteBtn).on('click', function(e) {
         
@@ -12,6 +14,10 @@ $(document).ready(function() {
         if(result) {
             window.location.href = delLink;
         }
+    });
+
+    $(seachBtn).on('click', function() {
+        searchForm.submit();
     });
     
 });
