@@ -6,7 +6,11 @@ from .forms import TaskForm
 from django.contrib import messages
 
 def taskList(request):
-    tasks = Task.objects.all
+    search = request.GET.get('search')
+    if search:
+        tasks = Task.objects.filter(title__icontains=search)
+    else:
+        tasks = Task.objects.all
     return render(request, 'tasks/list.html', {'tasks': tasks})
 
 def taskView (request, id):
