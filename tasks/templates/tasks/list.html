@@ -12,7 +12,7 @@
         </a>
         <div class="col-9 search-div">
             <form method="GET" class="search-form">
-                <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar"/>
+                <input class="form-control" type="text" name="search" id="search" placeholder="Digite o nome da tarefa para buscar" value="{{ request.GET.search }}"/>
                 <i class="fas fa-search" id="search-btn"></i>
         </form>
         </div>
@@ -38,9 +38,9 @@
                     <a href="?page={{ tasks.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
                 {% endif %}
 
-                <span class="current">
-                    {{ tasks.number }} de {{ tasks.paginator.num_pages }}
-                </span>
+                    <span class="current">
+                        {{ tasks.number }} de {{ tasks.paginator.num_pages }}
+                    </span>
 
                 {% if tasks.has_next %}
                     <a href="?page={{ tasks.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
